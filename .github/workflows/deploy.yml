@@ -51,4 +51,3 @@ jobs:
         AWS_REGION: us-east-1
       run: cdk deploy --require-approval never
       working-directory: ./cdk
-
