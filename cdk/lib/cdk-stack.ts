@@ -9,7 +9,7 @@ export class CdkStack extends cdk.Stack {
     super(scope, id, props);
 
     const helloWorldLambda = new lambda.Function(this, 'HelloWorldLambda', {
-      runtime: lambda.Runtime.PROVIDED_AL2,
+      runtime: lambda.Runtime.PROVIDED_AL2023,
       handler: 'bootstrap',
       code: lambda.Code.fromAsset(path.join(__dirname, '../hello-world')),
     });
