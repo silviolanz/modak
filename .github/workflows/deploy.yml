@@ -33,7 +33,7 @@ jobs:
     - name: Build Go Lambda
       run: |
         cd cdk/hello-world
-        GOOS=linux go build -o hello-world main.go
+        GOOS=linux go build -o bootstrap main.go
         cd ../..
 
     - name: Bootstrap CDK
