@@ -10,7 +10,7 @@ export class CdkStack extends cdk.Stack {
 
     const helloWorldLambda = new lambda.Function(this, 'HelloWorldLambda', {
       runtime: lambda.Runtime.PROVIDED_AL2,
-      handler: 'hello-world',
+      handler: 'bootstrap',
       code: lambda.Code.fromAsset(path.join(__dirname, '../hello-world')),
     });
 
