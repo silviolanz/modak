@@ -8,7 +8,7 @@ import (
 func HandleRequest() (events.APIGatewayProxyResponse, error) {
 	return events.APIGatewayProxyResponse{
 		StatusCode: 200,
-		Body:       "Hello from Lambda!",
+		Body:       "Hello Modak!",
 	}, nil
 }
 
