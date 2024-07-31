@@ -1,15 +1,17 @@
 package main
 
 import (
-    "fmt"
-    "net/http"
+	"github.com/aws/aws-lambda-go/events"
+	"github.com/aws/aws-lambda-go/lambda"
 )
 
-func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintln(w, "Hello, World!")
+func HandleRequest() (events.APIGatewayProxyResponse, error) {
+	return events.APIGatewayProxyResponse{
+		StatusCode: 200,
+		Body:       "Hello from Lambda!",
+	}, nil
 }
 
 func main() {
-    http.HandleFunc("/", handler)
-    http.ListenAndServe(":8080", nil)
+	lambda.Start(HandleRequest)
 }
