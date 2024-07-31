@@ -6,7 +6,7 @@ Create a public repository on github that have a golang hello world code, and vi
 My Solution:
 
 First of all, I created a public github repo named 'modak'.
-As I started from zero, I had to install all dependencies 
+As I started from zero, I had to install all dependencies.
 (npm and node), find the right versions and finally installed go.
 After that, I created the main.go file with a simple hello-world code, initialized a go module and tested it locally.
 Once that worked, I initialized a new CDK project in the root directory of my repo (cdk init app --language typescript).
@@ -19,11 +19,11 @@ Troubleshooting:
 
 I encountered multiple issues during the process.
 I had to upgrade AWS CDK to v2 modifying package.json, lib/cdk-stack.ts and bin/cdk.ts files.
-I had to bootstrap my AWS Environment (cdk bootstrap aws://<ACCOUNT_ID>/<REGION>)
+I had to bootstrap my AWS Environment (cdk bootstrap aws://<ACCOUNT_ID>/<REGION>).
 I had to update my deploy.yml to use newer versions of go and node.
 I had to rebuild my lambda code to in order to make it work in AWS.
 I had to define dependencies in go.mod and created go.sum to ensure integrity and security.
-I had to update the lambda runtime (runtime: lambda.Runtime.PROVIDED_AL2023)
+I had to update the lambda runtime (runtime: lambda.Runtime.PROVIDED_AL2023).
 I used Cloudwatch logs to identify the issues.
 
 Testing: 
